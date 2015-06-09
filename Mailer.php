@@ -2,7 +2,7 @@
 
 class Mailer{
     public function mail($sender, $recipient, $subject, $sBody){
-        $sReplyTo = $sender;
+        $sReplyTo = $recipient;
         // Identify the mail server, username, password, and port
         $url = "https://api.sendgrid.com/api/mail.send.json";
         $oCreds = json_decode(file_get_contents(__DIR__ . "/../../../creds/sendgrid.json"));
@@ -11,7 +11,7 @@ class Mailer{
         // Set up the mail headers
         $fields = array(
             "from" => $sender,
-            "to" => $recipient,
+            "to" => $oCreds->recipient,
             "subject" => $subject,
             "html" => $sBody,
             "replyto" => $sReplyTo,
