@@ -1,0 +1,8 @@
+{
+    "name": "rhildred/mailer",
+    "autoload": {
+        "psr-0": {
+            "": ""
+        }
+    }
+}
