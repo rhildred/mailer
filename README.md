@@ -5,7 +5,7 @@ Use this with composer to make an endpoint that sends an email. You will need a 
 
 ```
 
-{"api_user":"your username", "api_key":"your sendgrid password", "from":"the from address that you would like to use"}
+{"api_user":"your username", "api_key":"your sendgrid password"}
 
 ```
 
