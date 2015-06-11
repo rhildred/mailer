@@ -31,5 +31,6 @@ class Mailer{
         $oResult = json_decode(curl_exec($ch));
         //close connection
         curl_close($ch);
+        return $oResult;
     }
 }
