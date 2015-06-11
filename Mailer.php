@@ -28,7 +28,7 @@ class Mailer{
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         //execute post
-        $oResult = json_decode(curl_exec($ch));
+        $oResult = curl_exec($ch);
         //close connection
         curl_close($ch);
         return $oResult;
